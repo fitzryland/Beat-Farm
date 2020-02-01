@@ -23,18 +23,24 @@
     height: 100%;
   }
   body {
+    align-items: center;
     background-color: #000;
     background-image: url('./assets/small_logo.svg');
     background-position: center left;
     background-repeat: no-repeat;
     background-size: auto 120%;
+    display: flex;
     margin: 0;
     min-height: 100%;
   }
   #app {
     color: #fff;
     font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+    justify-content: center;
+    min-height: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
-    margin-top: 60px;
+    width: 100%;
   }
 </style>
