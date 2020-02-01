@@ -18,10 +18,13 @@
 <style scoped lang="scss">
   .intro {
     display: block;
-    font-size: 8vw;
-    text-transform: uppercase;
     margin-right: auto;
     margin-left: auto;
     width: 80%;
+  }
+  .title {
+    font-size: 8vw;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 </style>
