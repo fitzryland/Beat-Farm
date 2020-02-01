@@ -27,7 +27,7 @@
     background-image: url('./assets/small_logo.svg');
     background-position: center left;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto 120%;
     margin: 0;
     min-height: 100%;
   }
