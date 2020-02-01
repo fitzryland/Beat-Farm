@@ -19,8 +19,17 @@
 </script>
 
 <style lang="scss">
+  html {
+    height: 100%;
+  }
   body {
     background-color: #000;
+    background-image: url('./assets/small_logo.svg');
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0;
+    min-height: 100%;
   }
   #app {
     color: #fff;
