@@ -19,7 +19,7 @@
 </script>
 
 <style lang="scss">
-  $ff-montserrat: 'Montserrat', Zapfino, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  $ff-montserrat: 'Montserrat', Arial, "Helvetica Neue", Helvetica, sans-serif;
   html {
     height: 100%;
   }
