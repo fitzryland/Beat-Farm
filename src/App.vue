@@ -19,6 +19,7 @@
 </script>
 
 <style lang="scss">
+  $ff-montserrat: 'Montserrat', Zapfino, Arial, "Helvetica Neue", Helvetica, sans-serif;
   html {
     height: 100%;
   }
@@ -30,12 +31,13 @@
     background-repeat: no-repeat;
     background-size: auto 120%;
     display: flex;
+    font-family: $ff-montserrat;
+    font-size: 18px;
     margin: 0;
     min-height: 100%;
   }
   #app {
     color: #fff;
-    font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
     justify-content: center;
     min-height: 100%;
     padding-top: 30px;

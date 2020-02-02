@@ -21,6 +21,7 @@
     margin-right: auto;
     margin-left: auto;
     width: 80%;
+    font-weight: 900;
   }
   .title {
     font-size: 8vw;
