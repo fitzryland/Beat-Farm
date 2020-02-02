@@ -1,48 +1,83 @@
 <template>
   <div id="app">
-    <Logo />
-    <Intro title="July 16-19 2020" />
+    <Header v-bind:sections=sections />
+    <main>
+      <template
+        v-for="section in sections"
+      >
+        <Section
+          v-bind:key="section.title.toLowerCase()"
+          v-bind="section"
+        />
+      </template>
+    </main>
   </div>
 </template>
 
 <script>
-  import Logo from './components/Logo.vue'
-  import Intro from './components/Intro.vue'
-
+  import Header from './components/Header.vue'
+  import Section from './components/Section.vue'
+  import content from './assets/content.json'
   export default {
     name: 'app',
     components: {
-      Logo,
-      Intro
+      Header,
+      Section
+    },
+    data (){
+      return {
+        sections: content.sections
+      }
     }
   }
 </script>
 
 <style lang="scss">
-  $ff-montserrat: 'Montserrat', Zapfino, Arial, "Helvetica Neue", Helvetica, sans-serif;
   html {
     height: 100%;
+    scroll-behavior: smooth;
   }
   body {
     align-items: center;
+    background-attachment: fixed;
     background-color: #000;
     background-image: url('./assets/small_logo.svg');
     background-position: 10% center;
     background-repeat: no-repeat;
     background-size: auto 120%;
+    color: #fff;
     display: flex;
     font-family: $ff-montserrat;
     font-size: 18px;
     margin: 0;
     min-height: 100%;
   }
+  h2 {
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  a {
+    transition: color 0.2s ease;
+    &:link,
+    &:visited {
+      color: $c-teal;
+      text-decoration: underline;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      color: $c-pink;
+    }
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
   #app {
-    color: #fff;
     justify-content: center;
     min-height: 100%;
     padding-top: 30px;
     padding-bottom: 30px;
-    text-align: center;
     width: 100%;
   }
 </style>

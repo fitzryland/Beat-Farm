@@ -1,0 +1,12 @@
+$ff-montserrat: 'Montserrat', Zapfino, Arial, "Helvetica Neue", Helvetica, sans-serif;
+$c-teal: #00feff;
+$c-pink: #f675ff;
+$c-black: #000;
+$c-white: #fff;
+@mixin button {
+  border: 2px solid $c-white;
+  color: $c-white;
+  display: inline-block;
+  text-transform: uppercase;
+  // @TODO more stuff
+}

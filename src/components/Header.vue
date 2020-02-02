@@ -1,0 +1,49 @@
+<template>
+  <header aria-label="BEAT FARM Site Header">
+    <h1 class="logo">
+      <img alt="BEAT FARM" src="../assets/logo.svg">
+    </h1>
+    <p>July 16-19 2020</p>
+    <Nav v-bind:sections=sections />
+  </header>
+</template>
+
+<script>
+  import Nav from '../components/Nav.vue'
+  export default {
+    name: 'Header',
+    props: {
+      sections: Array
+    },
+    components: {
+      Nav
+    }
+  }
+</script>
+
+<style scoped lang="scss">
+  header {
+    min-height: 100vh;
+    text-align: center;
+  }
+  .logo {
+    display: block;
+    margin-right: auto;
+    margin-bottom: 1vh;
+    margin-left: auto;
+    width: 80%;
+  }
+  img {
+    max-height: 50vh;
+  }
+  p {
+    display: block;
+    font-size: 8vw;
+    font-weight: 900;
+    margin-right: auto;
+    margin-bottom: 10vh;
+    margin-left: auto;
+    text-transform: uppercase;
+    width: 80%;
+  }
+</style>
