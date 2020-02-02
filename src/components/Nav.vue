@@ -8,6 +8,7 @@
       v-for="section in sections"
       v-bind:key=section.title
       :href="'#' + section.title.toLowerCase()"
+      :class="section.color + ' js-nav_item'"
     >
       {{ section.title }}
     </a>
@@ -44,6 +45,15 @@
               stuck = false;
             }
           }
+          // @TODO define a way of setting the current indicator
+          var navItems = document.getElementsByClassName('js-nav_item'),
+              navItemsLength = navItems.lenght;
+          for ( var i = 0; i < navItemsLength; i++ ) {
+            // @TODO just a placeholder
+            // if ( i === 0 ) {
+              navItems[i].classList.add('current');
+            // }
+          }
         }
       }
       this.$nextTick()
@@ -72,8 +82,35 @@
       text-decoration: none;
     }
     &:after {
+      bottom: 0;
       content: "";
+      height: 4px;
+      left: 0;
       position: absolute;
+      transition: height 0.2s ease-out;
+      right: 0;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      &:after {
+        height: 8px;
+      }
+    }
+  }
+  .pink {
+    &:after {
+      background-color: $c-pink;
+    }
+  }
+  .teal {
+    &:after {
+      background-color: $c-teal;
+    }
+  }
+  .orange {
+    &:after {
+      background-color: $c-orange;
     }
   }
 </style>

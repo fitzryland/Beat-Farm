@@ -23,11 +23,16 @@
 
 <style scoped lang="scss">
   header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: $s-vertical/2;
     min-height: 100vh;
     text-align: center;
   }
   .logo {
     display: block;
+    margin-top: 0;
     margin-right: auto;
     margin-bottom: 1vh;
     margin-left: auto;
@@ -41,7 +46,7 @@
     font-size: 8vw;
     font-weight: 900;
     margin-right: auto;
-    margin-bottom: 10vh;
+    margin-bottom: 4vh;
     margin-left: auto;
     text-transform: uppercase;
     width: 80%;

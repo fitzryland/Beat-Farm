@@ -38,7 +38,6 @@
     scroll-behavior: smooth;
   }
   body {
-    align-items: center;
     background-attachment: fixed;
     background-color: #000;
     background-image: url('./assets/small_logo.svg');
@@ -46,7 +45,6 @@
     background-repeat: no-repeat;
     background-size: auto 120%;
     color: #fff;
-    display: flex;
     font-family: $ff-montserrat;
     font-size: 18px;
     margin: 0;
@@ -74,10 +72,7 @@
     margin-bottom: 1em;
   }
   #app {
-    justify-content: center;
     min-height: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
     width: 100%;
   }
 </style>
