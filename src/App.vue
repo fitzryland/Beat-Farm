@@ -11,6 +11,7 @@
         />
       </template>
     </main>
+    <footer>@todo add instagram</footer>
   </div>
 </template>
 
