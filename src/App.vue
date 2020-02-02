@@ -26,7 +26,7 @@
     align-items: center;
     background-color: #000;
     background-image: url('./assets/small_logo.svg');
-    background-position: center left;
+    background-position: 10% center;
     background-repeat: no-repeat;
     background-size: auto 120%;
     display: flex;
