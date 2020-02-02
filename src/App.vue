@@ -34,6 +34,9 @@
 </script>
 
 <style lang="scss">
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
   html {
     height: 100%;
     scroll-behavior: smooth;
