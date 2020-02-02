@@ -68,7 +68,9 @@
 <style scoped lang="scss">
   nav {
     background-color: $c-black;
+    position: relative;
     width: 100%;
+    z-index: 100;
   }
   a {
     display: inline-block;
