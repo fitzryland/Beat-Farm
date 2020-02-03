@@ -29,24 +29,24 @@
             return topDist;
           },
         init: function() {
-          // @TODO define a way of setting the current indicator
           var navItems = document.getElementsByClassName('js-nav_item'),
               navItemsLength = navItems.length,
-              navData = [];
+              navData = [],
+              prevNavItem = false;
           for ( var i = 0; i < navItemsLength; i++ ) {
             var navItem = navItems[i]
-            console.log('navItem');
-            console.log(navItem);
             var itemData = {
               top: 0,
               bottom: 0,
               navEl: navItem
             };
-            // @TODO add the top and bottom positions
+            var targetId = navItem.href.split('#').pop();
+            var target = document.getElementById(targetId);
+            var targetBounds = target.getBoundingClientRect();
+            itemData.top = targetBounds.top;
+            itemData.bottom = targetBounds.bottom;
             navData.push(itemData);
           }
-          console.log('navData');
-          console.log(navData);
           var that = this;
           var h = document.getElementById("js-nav");
           var stuck = false;
@@ -56,11 +56,23 @@
           window.onscroll = function() {
             var distance = that.getDistance(h) - window.pageYOffset;
             var curMiddle = Math.round(window.pageYOffset + vm, 10);
-            console.log('curMiddle');
-            console.log(curMiddle);
-            // @TODO filter navData array to see
-            // if curMiddle is > it's top and < it's bottom
-            // then set the current indicator
+            var curEl = navData.filter(item => item.top < curMiddle && item.bottom > curMiddle);
+            if ( curEl.length > 0 ) {
+              // there is an element that matches
+              curEl = curEl[0].navEl;
+              if ( curEl !== prevNavItem ) {
+                if ( prevNavItem ) {
+                  prevNavItem.classList.remove('current');
+                }
+                curEl.classList.add('current');
+                prevNavItem = curEl;
+              }
+            } else {
+              if ( prevNavItem ) {
+                prevNavItem.classList.remove('current');
+                prevNavItem = false;
+              }
+            }
             var offset = window.pageYOffset;
             if ( (distance <= 0) && !stuck) {
               h.style.position = 'fixed';
@@ -106,8 +118,9 @@
       height: 4px;
       left: 0;
       position: absolute;
-      transition: height 0.2s ease-out;
+      transition: height 0.2s ease-out, color 0.2s ease-out;
       right: 0;
+      z-index: -1;
     }
     &:hover,
     &:active,
@@ -115,6 +128,12 @@
       &:after {
         height: 8px;
       }
+    }
+  }
+  a.current {
+    color: $c-black;
+    &:after {
+      height: 42px;
     }
   }
   .pink {
