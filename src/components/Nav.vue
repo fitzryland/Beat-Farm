@@ -7,8 +7,8 @@
     <a
       v-for="section in sections"
       v-bind:key=section.gsx$title.$t
-      :href="'#' + this.gsx$title.$t.toLowerCase()lug"
-      :class="this.gsx$color.$t + ' js-nav_item'"
+      :href="'#' + section.gsx$title.$t.toLowerCase()"
+      :class="section.gsx$color.$t + ' js-nav_item'"
     >
       {{ section.gsx$title.$t }}
     </a>
@@ -22,29 +22,17 @@
       sections() {
         return this.$store.state.sections
       }
-      // slug() {
-      //   console.log('this')
-      //   console.log(this)
-      //   // return '#' + this.gsx$title.$t.toLowerCase()
-      //   return 'BOOOM slug';
-      // },
-      // className() {
-      //   // return this.gsx$color.$t + ' js-nav_item'
-      //   return 'BOOOM className';
-      // }
     },
-    mounted () {
-      // this.sections = this.$store.state.sections
+    updated () {
       var sticky = {
         getDistance: function(h) {
             var topDist = h.offsetTop;
             return topDist;
           },
-        init: function() {
-          var navItems = document.getElementsByClassName('js-nav_item'),
-              navItemsLength = navItems.length,
-              navData = [],
-              prevNavItem = false;
+        setNavData: function() {
+          let navData = [];
+          let navItems = document.getElementsByClassName('js-nav_item');
+          let navItemsLength = navItems.length;
           for ( var i = 0; i < navItemsLength; i++ ) {
             var navItem = navItems[i]
             var itemData = {
@@ -59,7 +47,12 @@
             itemData.bottom = targetBounds.bottom;
             navData.push(itemData);
           }
+          return navData;
+        },
+        init: function() {
           var that = this;
+          var navData = that.setNavData(),
+              prevNavItem = false;
           var h = document.getElementById("js-nav");
           var stuck = false;
           var stickPoint = that.getDistance(h);
@@ -97,10 +90,9 @@
           }
         }
       }
-      this.$nextTick()
-        .then(function() {
-          sticky.init()
-        })
+      this.$nextTick(function() {
+        sticky.init()
+      });
     }
   }
 

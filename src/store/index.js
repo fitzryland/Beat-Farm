@@ -7,9 +7,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   debug: true,
   state: {
-    sections: null
+    sections: []
   },
-  getters: {},
   mutations: {
     getSections (state) {
       var xhr = new XMLHttpRequest()

@@ -12,6 +12,9 @@
   </section>
 </template>
 <script>
+  /*
+
+  */
   export default {
     name: 'Section',
     props: {
