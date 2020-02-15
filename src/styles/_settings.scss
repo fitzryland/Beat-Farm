@@ -6,9 +6,36 @@ $c-black: #000;
 $c-white: #fff;
 $s-vertical: 60px;
 @mixin button {
+  background-color: $c-black;
   border: 2px solid $c-white;
-  color: $c-white;
   display: inline-block;
+  padding: 0.6em 1em;
+  position: relative;
   text-transform: uppercase;
-  // @TODO more stuff
+  transition: all 0.2s ease;
+  &:link,
+  &:visited {
+    color: $c-white;
+    text-decoration: none;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: $c-pink;
+    color: $c-white;
+    &:before {
+      transform: translate( 0.4em, 0.6em );
+    }
+  }
+  &:before {
+    background-color: $c-teal;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    transition: transform 0.3s ease-in;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
 }

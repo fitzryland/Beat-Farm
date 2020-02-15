@@ -2,13 +2,12 @@
   <section
     :aria-label=title
     :id=title.toLowerCase()
+    :class="'section__' + title.toLowerCase()"
   >
     <h2 :class=color>
       {{ title }}
     </h2>
-    <div>
-      {{ content }}
-    </div>
+    <div class="content" v-html="content"></div>
   </section>
 </template>
 <script>
@@ -37,7 +36,9 @@
     width: 100%;
   }
   h2 {
+    font-size: 36px;
     position: relative;
+    text-align: left;
     &:after {
       bottom: -4px;
       content: "";
@@ -46,6 +47,9 @@
       position: absolute;
       width: 100px;
     }
+  }
+  .content {
+    padding-top: 50px;
   }
   .pink {
     &:after {
@@ -60,6 +64,23 @@
   .orange {
     &:after {
       background-color: $c-orange;
+    }
+  }
+</style>
+<style lang="scss">
+  .section__tickets {
+    .content {
+      max-width: 400px;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+    }
+    a {
+      @include button;
+      border-width: 4px;
+      font-size: 24px;
+      font-weight: 600;
+      text-transform: uppercase;
     }
   }
 </style>
