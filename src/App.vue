@@ -1,35 +1,46 @@
 <template>
   <div id="app">
-    <Header v-bind:sections=sections />
+    <Header />
     <main>
-      <template
-        v-for="section in sections"
-      >
-        <Section
-          v-bind:key="section.title.toLowerCase()"
-          v-bind="section"
-        />
-      </template>
+
     </main>
     <footer>@todo add instagram</footer>
   </div>
 </template>
 
 <script>
+
+  /*
+  <template
+    v-for="section in sections"
+  >
+    <Section
+      v-bind:key="section"
+      v-bind="section"
+    />
+  </template>
+  */
+
   import Header from './components/Header.vue'
   import Section from './components/Section.vue'
-  import content from './assets/content.json'
+  // import content from './assets/content.json'
+
   export default {
     name: 'app',
     components: {
-      Header,
-      Section
+      Header
+      // Section
     },
-    data (){
-      return {
-        sections: content.sections
-      }
-    }
+    // computed: {
+    //   sections() {
+    //     return this.$store.state.sections
+    //   }
+    // }
+    // data() {
+    //   return {
+    //     sections: this.$store.state.sections
+    //   }
+    // }
   }
 </script>
 

@@ -6,11 +6,11 @@
   >
     <a
       v-for="section in sections"
-      v-bind:key=section.title
-      :href="'#' + section.title.toLowerCase()"
-      :class="section.color + ' js-nav_item'"
+      v-bind:key=section.gsx$title.$t
+      :href="'#' + this.gsx$title.$t.toLowerCase()lug"
+      :class="this.gsx$color.$t + ' js-nav_item'"
     >
-      {{ section.title }}
+      {{ section.gsx$title.$t }}
     </a>
   </nav>
 </template>
@@ -18,11 +18,23 @@
 <script>
   export default {
     name: 'Nav',
-    props: {
-      title: String,
-      sections: Array
+    computed: {
+      sections() {
+        return this.$store.state.sections
+      }
+      // slug() {
+      //   console.log('this')
+      //   console.log(this)
+      //   // return '#' + this.gsx$title.$t.toLowerCase()
+      //   return 'BOOOM slug';
+      // },
+      // className() {
+      //   // return this.gsx$color.$t + ' js-nav_item'
+      //   return 'BOOOM className';
+      // }
     },
     mounted () {
+      // this.sections = this.$store.state.sections
       var sticky = {
         getDistance: function(h) {
             var topDist = h.offsetTop;

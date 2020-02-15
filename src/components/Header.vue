@@ -4,7 +4,7 @@
       <img alt="BEAT FARM" src="../assets/logo.svg">
     </h1>
     <p>July 16-19 2020</p>
-    <Nav v-bind:sections=sections />
+    <Nav />
   </header>
 </template>
 
@@ -12,9 +12,6 @@
   import Nav from '../components/Nav.vue'
   export default {
     name: 'Header',
-    props: {
-      sections: Array
-    },
     components: {
       Nav
     }
