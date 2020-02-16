@@ -1,15 +1,21 @@
 import Vue from 'vue'
-// import router from './router'
+import router from './router'
 import store from "./store"
-
+import App from './App.vue'
 Vue.config.productionTip = false
 
-var dataUrl = 'https://spreadsheets.google.com/feeds/list/1t9DT6g23nMERZVJ-pV3UdLnrnS6vKJLG78wn3sSkYTw/1/public/values?alt=json';
+// var dataUrl = 'https://spreadsheets.google.com/feeds/list/1t9DT6g23nMERZVJ-pV3UdLnrnS6vKJLG78wn3sSkYTw/1/public/values?alt=json';
 
-new Vue({
+const app = new Vue({
+  router,
+  render: h => h(App),
+}).$mount('#app')
+
+
+
+
+
   // store,
-  // router
-  // template: '<App />'
   // data: {
   //   sections: null
   // },
@@ -24,4 +30,3 @@ new Vue({
   //     this.$store.commit("getSections")
   //   }
   // }
-}).$mount('#app')

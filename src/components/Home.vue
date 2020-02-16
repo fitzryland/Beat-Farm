@@ -1,12 +1,38 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div class="home">
+    <Header />
   </div>
 </template>
 
 <script>
+  /*
+    <main aria-label="main sections of Beat Farm">
+      <template
+        v-for="section in sections"
+      >
+        <Section
+          v-bind:key="section.gsx$title.$t + 'section'"
+          v-bind:title="section.gsx$title.$t"
+          v-bind:content="section.gsx$content.$t"
+          v-bind:color="section.gsx$color.$t"
+        />
+      </template>
+    </main>
+    <footer>@todo add instagram</footer>
+  */
+  import Header from './Header.vue'
+  // import Section from './components/Section.vue'
   export default {
-    name: 'app'
+    name: 'home',
+    components: {
+      Header
+      // Section
+    }
+    // computed: {
+    //   sections() {
+    //     return this.$store.state.sections
+    //   }
+    // }
   }
 </script>
 
@@ -21,7 +47,7 @@
   body {
     background-attachment: fixed;
     background-color: #000;
-    background-image: url('./assets/small_logo.svg');
+    background-image: url('../assets/small_logo.svg');
     background-position: 10% center;
     background-repeat: no-repeat;
     background-size: auto 120%;

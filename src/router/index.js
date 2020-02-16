@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-// import Admin from '../Admin.vue'
-import App from '../App.vue'
+import Admin from '../components/Admin.vue'
+import Home from '../components/Home.vue'
+
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -9,12 +10,12 @@ export default new VueRouter({
     {
       path: '/',
       name: 'Home',
-      component: App
+      component: Home
     },
-    // {
-    //   path: '/admin',
-    //   name: 'Admin',
-    //   component: Admin
-    // }
+    {
+      path: '/admin',
+      name: 'Admin',
+      component: Admin
+    }
   ]
 });
