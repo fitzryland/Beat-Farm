@@ -7,6 +7,11 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+  <div id="app">
+    <router-link to="/">Go to home</router-link>
+    <router-link to="/admin">Go to admin</router-link>
+    <router-view></router-view>
+  </div>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
 </body>

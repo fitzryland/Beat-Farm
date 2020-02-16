@@ -27,12 +27,12 @@
     components: {
       Header
       // Section
-    },
-    computed: {
-      sections() {
-        return this.$store.state.sections
-      }
     }
+    // computed: {
+    //   sections() {
+    //     return this.$store.state.sections
+    //   }
+    // }
   }
 </script>
 
