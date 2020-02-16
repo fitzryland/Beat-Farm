@@ -20,6 +20,9 @@ collections:
           - label: "Section Title"
             name: "section-title"
             widget: text
+          - label: "Section Color"
+            name: "section-color"
+            widget: text
           - label: "Section Content"
             name: "section-content"
             widget: "list"
