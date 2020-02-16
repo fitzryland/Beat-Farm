@@ -6,6 +6,7 @@ import Home from '../components/Home.vue'
 Vue.use(VueRouter)
 
 export default new VueRouter({
+  mode: 'history',
   routes: [
     {
       path: '/',
