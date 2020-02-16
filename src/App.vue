@@ -1,6 +1,11 @@
 <template>
   <div id="app">
     <Header />
+  </div>
+</template>
+
+<script>
+  /*
     <main aria-label="main sections of Beat Farm">
       <template
         v-for="section in sections"
@@ -14,17 +19,14 @@
       </template>
     </main>
     <footer>@todo add instagram</footer>
-  </div>
-</template>
-
-<script>
+  */
   import Header from './components/Header.vue'
-  import Section from './components/Section.vue'
+  // import Section from './components/Section.vue'
   export default {
     name: 'app',
     components: {
-      Header,
-      Section
+      Header
+      // Section
     },
     computed: {
       sections() {
