@@ -3,6 +3,7 @@ backend:
   branch: master
 media_folder: '/public/uploads'
 public_folder: '/uploads'
+extension: 'json'
 format: 'json'
 collections:
   - label: "Pages"
@@ -10,7 +11,7 @@ collections:
     files:
       - label: "Home Page"
         name: "home"
-        file: "_content/home.yml"
+        file: "_content/home.json"
         fields:
           - label: "Sections"
             name: "sections"

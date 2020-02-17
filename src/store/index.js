@@ -1,7 +1,7 @@
 import Vue from "vue"
 import Vuex from "vuex"
 import yaml from "js-yaml"
-// import sectionsData = '../../_content/home.yml'
+import sectionsData from '../../_content/home.json'
 
 Vue.use(Vuex);
 
@@ -12,6 +12,8 @@ export default new Vuex.Store({
   },
   mutations: {
     getSections (state) {
+      // console.log('sectionsData');
+      // console.log(sectionsData);
       // var xhr = new XMLHttpRequest()
       // xhr.open( 'GET', dataUrl );
       // xhr.onload = function() {
