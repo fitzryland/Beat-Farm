@@ -1,38 +1,38 @@
 <template>
   <div class="home">
     <Header />
-  </div>
-</template>
-
-<script>
-  /*
     <main aria-label="main sections of Beat Farm">
       <template
         v-for="section in sections"
       >
         <Section
-          v-bind:key="section.gsx$title.$t + 'section'"
-          v-bind:title="section.gsx$title.$t"
-          v-bind:content="section.gsx$content.$t"
-          v-bind:color="section.gsx$color.$t"
+          v-bind:key="section['section-title'] + 'section'"
+          v-bind:title="section['section-title']"
+          v-bind:content="section['section-content']"
+          v-bind:color="section['section-color']"
         />
       </template>
     </main>
     <footer>@todo add instagram</footer>
+  </div>
+</template>
+
+<script>
+  /*
   */
   import Header from './Header.vue'
-  // import Section from './components/Section.vue'
+  import Section from './Section.vue'
   export default {
     name: 'home',
     components: {
-      Header
-      // Section
+      Header,
+      Section
+    },
+    computed: {
+      sections() {
+        return this.$store.state.sections
+      }
     }
-    // computed: {
-    //   sections() {
-    //     return this.$store.state.sections
-    //   }
-    // }
   }
 </script>
 

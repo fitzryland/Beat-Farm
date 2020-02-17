@@ -7,7 +7,7 @@
     <h2 :class=color>
       {{ title }}
     </h2>
-    <div class="content" v-html="content"></div>
+    <!-- <div class="content" v-html="content"></div> -->
   </section>
 </template>
 <script>
@@ -18,7 +18,7 @@
     name: 'Section',
     props: {
       title: String,
-      content: String,
+      content: Array,
       color: String
     }
   }

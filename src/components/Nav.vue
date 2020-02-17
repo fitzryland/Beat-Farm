@@ -6,11 +6,11 @@
   >
     <a
       v-for="section in sections"
-      v-bind:key=section.gsx$title.$t
-      :href="'#' + section.gsx$title.$t.toLowerCase()"
-      :class="section.gsx$color.$t + ' js-nav_item'"
+      v-bind:key=section[section-title]
+      :href="'#' + section['section-title'].toLowerCase()"
+      :class="section['section-color'] + ' js-nav_item'"
     >
-      {{ section.gsx$title.$t }}
+      {{ section['section-title'] }}
     </a>
   </nav>
 </template>

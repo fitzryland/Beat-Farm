@@ -12,8 +12,9 @@ export default new Vuex.Store({
   },
   mutations: {
     getSections (state) {
-      // console.log('sectionsData');
-      // console.log(sectionsData);
+      // console.log('sectionsData')
+      // console.log(sectionsData.sections)
+      state.sections = sectionsData.sections
       // var xhr = new XMLHttpRequest()
       // xhr.open( 'GET', dataUrl );
       // xhr.onload = function() {
