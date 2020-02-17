@@ -40,8 +40,13 @@ collections:
                       - {label: Image, name: image, widget: image, required: false}
                   - label: "Accordions"
                     name: "accordions"
-                    widget: list
+                    widget: object
                     required: false
                     fields:
-                      - {label: Title, name: title, widget: text, required: false}
-                      - {label: Content, name: content, widget: markdown, required: false}
+                      - label: Accordion
+                        name: accordion
+                        widget: list
+                        required: false
+                        fields:
+                          - {label: Title, name: title, widget: text, required: false}
+                          - {label: Content, name: content, widget: markdown, required: false}
