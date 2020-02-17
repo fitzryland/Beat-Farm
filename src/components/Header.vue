@@ -4,18 +4,18 @@
       <img alt="BEAT FARM" src="../assets/logo.svg">
     </h1>
     <p>July 16-19 2020</p>
+    <Nav />
   </header>
 </template>
 
 <script>
   /*
-    <Nav />
   */
   import Nav from '../components/Nav.vue'
   export default {
     name: 'Header',
     components: {
-      // Nav
+      Nav
     }
   }
 </script>
