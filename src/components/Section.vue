@@ -7,19 +7,30 @@
     <h2 :class=color>
       {{ title }}
     </h2>
+    <div
+      v-for="(row, index) in content"
+      v-bind:key="row.type + '_' + index"
+    >
+      <TextWithImage
+        v-if="row.type == 'text-with-image'"
+        v-bind:text=row.text
+        v-bind:image=row.image
+      />
+    </div>
     <!-- <div class="content" v-html="content"></div> -->
   </section>
 </template>
 <script>
-  /*
-
-  */
+  import TextWithImage from './TextWithImage.vue'
   export default {
     name: 'Section',
     props: {
       title: String,
       content: Array,
       color: String
+    },
+    components: {
+      TextWithImage
     }
   }
 </script>
