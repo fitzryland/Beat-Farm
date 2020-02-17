@@ -1,3 +1,11 @@
 sections:
   - section-color: Pink
+    section-content:
+      - text: >-
+          Buy Tickets
+
+
+          Nobody is making money here. Tickets are just a way for us to pool
+          resources so that we can make it a great experience.
+        type: text-with-image
     section-title: Ticktes
