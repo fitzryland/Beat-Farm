@@ -5,8 +5,8 @@
     aria-label="Main Navigation"
   >
     <a
-      v-for="section in sections"
-      v-bind:key=section[section-title]
+      v-for="(section, sectionIndex) in sections"
+      v-bind:key="section['section-title'] + '_' + sectionIndex"
       :href="'#' + section['section-title'].toLowerCase()"
       :class="section['section-color'] + ' js-nav_item'"
     >
@@ -23,7 +23,7 @@
         return this.$store.state.sections
       }
     },
-    updated () {
+    mounted () {
       var sticky = {
         getDistance: function(h) {
             var topDist = h.offsetTop;

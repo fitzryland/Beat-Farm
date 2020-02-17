@@ -17,7 +17,6 @@
         v-bind:image=row.image
       />
     </div>
-    <!-- <div class="content" v-html="content"></div> -->
   </section>
 </template>
 <script>
