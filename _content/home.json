@@ -6,7 +6,7 @@
       "section-content": [
         {
           "type": "text-with-image",
-          "text": "[Buy Tickets](https://www.google.com)\n\nNobody is making money here. Tickets are just a way for us to pool\nresources so that we can make it a great experience.",
+          "text": "[Buy Tickets](https://www.google.com)\n\nNobody is making money here. Tickets are just a way for us to pool resources so that we can make it a great experience.",
           "image": "/uploads/beatfarmsign.jpg"
         }
       ]
@@ -17,21 +17,22 @@
       "section-content": [
         {
           "type": "text-with-image",
-          "text": "### About Turning Earth Farms\n\n[https://www.turningearthfarms.​org](https://www.turningearthfarms.org/)\n\n> We are dedicated to creating an environment in which you feel uninhibited while playing a role in a sustainable community. With your help we can build a creative hub that respects the earth, using alternative farming methods while reaping the benefits of localized agricultural production.\n>\n> Whether you come to the farm with specific ambitions, or want to join whatever the certain moment has in store, we are interested in your contributions! Allow the land to become your muse and let your creativity flow while you gain valuable life experiences surrounded by the breathtaking Oregon countryside.\n\n### Rules & Safety Info\n\nIn order to provide a fun, safe and sustainable experience for all out guests, we ask you to adhere to the following guidelines:\n\n1. **Leave-No-Trace** - Prepare to pack out any garbage, recycling or food waste that you bring in or create while at the festival and clean up after yourself after using any amenity. We encourage the use of reusable items and will have a small (very rustic) dish washing station available.\n2. **Respect Your Surroundings** - We are guests of Turning Earth Farms and the rich ecosystem it encompasses. Be gentle when you engage with property, livestock, and natural features.\n3. **Prevent Conflict** - If you find yourself in an situation that makes you feel unsafe or uncomfortable find and report it to a Beat Farm organizer\n4. **Play At Your Own Risk** - Turning Earth Farms is NOT liable for any injuries or lost or stolen items during your stay.\n\n### Amenities\n\n**River** - There are several locations to wade and swim in the chilly stream that runs through the property.\n\n**Camp Kitchen** - We will provide a small shared kitchen space for you to cook meals with a flat top grill, camp stove and makeshift dish washing station. If you need additional resources for preparing your meals Turning Earth Farms has an outdoor kitchen located near the farmhouse. Leave-No-Trace principles should be practiced in both these areas.\n\n**Waste Stations** - Turning Earth Farms has 2 compost toilets on the South side of the camping area. There are also porto-potties located on the North side of the camping area.\n\n### Theme Days\n\n**Friday**: Animal House\n\n**Saturday**: Intergalactic Odyssey\n\nOther options: Western, Camp Colors, Rainbow, Nature, Pajama party, tight and bright, safari, jungle, anything but clothes, super hero, tropical, superstars, science, under the sea,",
+          "text": "### About Turning Earth Farms\n\n[https://www.turningearthfarms.​org](https://www.turningearthfarms.org/)\n\n> We are dedicated to creating an environment in which you feel uninhibited while playing a role in a sustainable community. With your help we can build a creative hub that respects the earth, using alternative farming methods while reaping the benefits of localized agricultural production.\n>\n> Whether you come to the farm with specific ambitions, or want to join whatever the certain moment has in store, we are interested in your contributions! Allow the land to become your muse and let your creativity flow while you gain valuable life experiences surrounded by the breathtaking Oregon countryside.",
           "image": ""
         },
         {
-          "type": "accordions",
-          "accordion": [
-            {
-              "title": "Example FAQ 1",
-              "content": "Example FAQ 1 conent Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            },
-            {
-              "title": "Example FAQ 2",
-              "content": "Example FAQ 2 Content"
-            }
-          ]
+          "type": "text-with-image",
+          "text": "### Rules & Safety Info\n\nIn order to provide a fun, safe and sustainable experience for all out guests, we ask you to adhere to the following guidelines:\n\n1. **Leave-No-Trace** - Prepare to pack out any garbage, recycling or food waste that you bring in or create while at the festival and clean up after yourself after using any amenity. We encourage the use of reusable items and will have a small (very rustic) dish washing station available.\n2. **Respect Your Surroundings** - We are guests of Turning Earth Farms and the rich ecosystem it encompasses. Be gentle when you engage with property, livestock, and natural features.\n3. **Prevent Conflict** - If you find yourself in an situation that makes you feel unsafe or uncomfortable find and report it to a Beat Farm organizer\n4. **Play At Your Own Risk** - Turning Earth Farms is NOT liable for any injuries or lost or stolen items during your stay.",
+          "image": "/uploads/scheduleingrass.jpg"
+        },
+        {
+          "type": "text-with-image",
+          "text": "### Amenities\n\n**River** - There are several locations to wade and swim in the chilly stream that runs through the property.\n\n**Camp Kitchen** - We will provide a small shared kitchen space for you to cook meals with a flat top grill, camp stove and makeshift dish washing station. If you need additional resources for preparing your meals Turning Earth Farms has an outdoor kitchen located near the farmhouse. Leave-No-Trace principles should be practiced in both these areas.\n\n**Waste Stations** - Turning Earth Farms has 2 compost toilets on the South side of the camping area. There are also porto-potties located on the North side of the camping area."
+        },
+        {
+          "type": "text-with-image",
+          "text": "### Theme Days\n\n**Friday**: Animal House\n\n**Saturday**: Intergalactic Odyssey\n\nOther options: Western, Camp Colors, Rainbow, Nature, Pajama party, tight and bright, safari, jungle, anything but clothes, super hero, tropical, superstars, science, under the sea,",
+          "image": "/uploads/ryneerinandgoats.jpg"
         }
       ]
     }
