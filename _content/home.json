@@ -6,7 +6,8 @@
       "section-content": [
         {
           "type": "text-with-image",
-          "text": "[Buy Tickets](https://www.google.com)\n\nNobody is making money here. Tickets are just a way for us to pool\nresources so that we can make it a great experience."
+          "text": "[Buy Tickets](https://www.google.com)\n\nNobody is making money here. Tickets are just a way for us to pool\nresources so that we can make it a great experience.",
+          "image": "/uploads/beatfarmsign.jpg"
         }
       ]
     },
