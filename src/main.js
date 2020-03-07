@@ -2,6 +2,7 @@ import Vue from 'vue'
 import router from './router'
 import store from "./store"
 import App from './App.vue'
+import VueMarkdown from 'vue-markdown'
 Vue.config.productionTip = false
 
 const app = new Vue({
@@ -9,6 +10,9 @@ const app = new Vue({
   router,
   data: {
     sections: null
+  },
+  components: {
+    VueMarkdown
   },
   watch: {
     currentPage: 'fetchData'
