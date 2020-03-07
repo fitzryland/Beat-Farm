@@ -31,9 +31,16 @@
     margin: 0;
     min-height: 100%;
   }
-  h2 {
+  h2,
+  h3 {
     text-transform: uppercase;
     font-weight: 900;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 30px;
   }
   a {
     transition: color 0.2s ease;
@@ -47,6 +54,10 @@
     &:focus {
       color: $c-pink;
     }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
   }
   p {
     margin-top: 0;

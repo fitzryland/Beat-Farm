@@ -1,3 +1,4 @@
+@import "./node_modules/breakpoint-sass/stylesheets/_breakpoint.scss";
 $ff-montserrat: 'Montserrat', Arial, "Helvetica Neue", Helvetica, sans-serif;
 $c-teal: #00feff;
 $c-pink: #f675ff;
@@ -5,6 +6,11 @@ $c-orange: #ff9900;
 $c-black: #000;
 $c-white: #fff;
 $s-vertical: 60px;
+$bp-small: 410px max-width;
+$bp-medium: 411px 1110px;
+$bp-medium-down: 1110px max-width;
+$bp-large: 1111px 1500px;
+$bp-xlarge: 1501px;
 @mixin button {
   background-color: $c-black;
   border: 2px solid $c-white;
@@ -38,4 +44,9 @@ $s-vertical: 60px;
     width: 100%;
     z-index: -1;
   }
+}
+@mixin center_image {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }

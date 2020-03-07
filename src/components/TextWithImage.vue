@@ -1,9 +1,17 @@
 <template>
   <div class="row">
-    <vue-markdown>
+    <vue-markdown
+      v-if=text
+      class="text-wrap"
+    >
       {{ text }}
     </vue-markdown>
-    <img v-if="image !== ''" :src="image">
+    <div
+      class="img-wrap"
+      v-if="image !== ''"
+    >
+      <img :src="image">
+    </div>
   </div>
 </template>
 <script>
@@ -20,5 +28,19 @@
   }
 </script>
 <style scoped lang="scss">
+  .row {
+    display: flex;
+    align-items: center;
+    @include breakpoint($bp-medium-down) {
+      flex-wrap: wrap;
+    }
+  }
+  .text-wrap {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .img-wrap {
+    @include center_image;
+  }
   img {}
 </style>
