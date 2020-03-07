@@ -4,12 +4,14 @@ $c-teal: #00feff;
 $c-pink: #f675ff;
 $c-orange: #ff9900;
 $c-black: #000;
+$c-transBlack: transparentize($c-black, 0.5);
 $c-white: #fff;
 $s-vertical: 60px;
 $bp-small: 410px max-width;
 $bp-medium: 411px 1110px;
 $bp-medium-down: 1110px max-width;
 $bp-large: 1111px 1500px;
+$bp-large-up: 1111px;
 $bp-xlarge: 1501px;
 @mixin button {
   background-color: $c-black;

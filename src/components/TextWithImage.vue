@@ -8,7 +8,7 @@
     </vue-markdown>
     <div
       class="img-wrap"
-      v-if="image !== ''"
+      v-if="image"
     >
       <img :src="image">
     </div>
@@ -29,18 +29,36 @@
 </script>
 <style scoped lang="scss">
   .row {
-    display: flex;
     align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
     @include breakpoint($bp-medium-down) {
       flex-wrap: wrap;
     }
   }
+  .img-wrap,
   .text-wrap {
-    padding-right: 20px;
-    padding-left: 20px;
+    @include breakpoint($bp-large-up) {
+      width: 100%;
+    }
   }
-  .img-wrap {
+  .text-wrap {
+    max-width: 770px;
+    @include breakpoint($bp-large-up) {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+  .img-wrap {}
+  img {
     @include center_image;
   }
-  img {}
+</style>
+<style lang="scss">
+  .text-wrap {
+    .section__tickets & {
+      text-align: center;
+    }
+  }
 </style>

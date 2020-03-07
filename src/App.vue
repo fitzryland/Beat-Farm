@@ -63,6 +63,11 @@
     margin-top: 0;
     margin-bottom: 1em;
   }
+  blockquote {
+    background-color: $c-transBlack;
+    margin: 0;
+    padding: 2em;
+  }
   #app {
     min-height: 100%;
     width: 100%;
