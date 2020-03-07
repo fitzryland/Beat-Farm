@@ -3,6 +3,7 @@
     <vue-markdown>
       {{ text }}
     </vue-markdown>
+    <img v-if="image !== ''" :src="image">
   </div>
 </template>
 <script>
@@ -19,4 +20,5 @@
   }
 </script>
 <style scoped lang="scss">
+  img {}
 </style>
