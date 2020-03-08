@@ -19,6 +19,7 @@
       <Accordions
         v-if="row.type == 'accordions'"
         v-bind:accordions=row.accordion
+        v-bind:title="row['accordions-title']"
       />
     </div>
   </section>

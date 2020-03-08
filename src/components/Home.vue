@@ -13,7 +13,7 @@
         />
       </template>
     </main>
-    <footer>@todo add instagram</footer>
+    <footer>&copy; {{ year }} Beat Farm PDX</footer>
   </div>
 </template>
 
@@ -31,11 +31,21 @@
     computed: {
       sections() {
         return this.$store.state.sections
+      },
+      year() {
+        return new Date().getFullYear()
       }
     }
   }
 </script>
 
+<style scoped lang="scss">
+  footer {
+    font-size: 16px;
+    padding: 20px;
+    text-align: center;
+  }
+</style>
 <style lang="scss">
   *, *:before, *:after {
     box-sizing: border-box;

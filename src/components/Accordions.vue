@@ -1,5 +1,11 @@
 <template>
   <div class="row row__accordion">
+    <h3
+      v-if=title
+      class="accords-title"
+    >
+      {{ title }}
+    </h3>
     <div
       class="accord"
       v-for="(accord, index) in accordions"
@@ -23,7 +29,8 @@
   export default {
     name: 'Accordions',
     props: {
-      accordions: Array
+      accordions: Array,
+      title: String
     },
     components: {
       VueMarkdown
