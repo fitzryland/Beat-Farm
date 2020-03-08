@@ -25,12 +25,14 @@
     },
     mounted () {
       var sticky = {
+        navData: [],
         getDistance: function(h) {
             var topDist = h.offsetTop;
             return topDist;
           },
         setNavData: function() {
-          let navData = [];
+          var that = this;
+          that.navData = [];
           let navItems = document.getElementsByClassName('js-nav_item');
           let navItemsLength = navItems.length;
           for ( var i = 0; i < navItemsLength; i++ ) {
@@ -43,16 +45,16 @@
             var targetId = navItem.href.split('#').pop();
             var target = document.getElementById(targetId);
             var targetBounds = target.getBoundingClientRect();
-            itemData.top = targetBounds.top;
-            itemData.bottom = targetBounds.bottom;
-            navData.push(itemData);
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            itemData.top = Math.round(targetBounds.top + scrollTop, 10)
+            itemData.bottom = Math.round(targetBounds.bottom + scrollTop, 10)
+            that.navData.push(itemData)
           }
-          return navData;
         },
         init: function() {
-          var that = this;
-          var navData = that.setNavData(),
+          var that = this,
               prevNavItem = false;
+          that.setNavData()
           var h = document.getElementById("js-nav");
           var stuck = false;
           var stickPoint = that.getDistance(h);
@@ -61,7 +63,7 @@
           window.onscroll = function() {
             var distance = that.getDistance(h) - window.pageYOffset;
             var curMiddle = Math.round(window.pageYOffset + vm, 10);
-            var curEl = navData.filter(item => item.top < curMiddle && item.bottom > curMiddle);
+            var curEl = that.navData.filter(item => item.top < curMiddle && item.bottom > curMiddle);
             if ( curEl.length > 0 ) {
               // there is an element that matches
               curEl = curEl[0].navEl;
@@ -88,6 +90,14 @@
               stuck = false;
             }
           }
+          document.onreadystatechange = () => {
+            if (document.readyState === 'complete') {
+              that.setNavData()
+            }
+          }
+          window.addEventListener('resize', () => {
+            that.setNavData()
+          });
         }
       }
       this.$nextTick(function() {
