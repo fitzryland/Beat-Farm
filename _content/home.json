@@ -85,6 +85,16 @@
           "accordions-title": "Some other shit"
         }
       ]
+    },
+    {
+      "section-title": "FAQs",
+      "section-color": "orange",
+      "section-content": [
+        {
+          "type": "text-with-image",
+          "text": "Example Section content"
+        }
+      ]
     }
   ]
 }
