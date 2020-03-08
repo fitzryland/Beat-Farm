@@ -28,15 +28,6 @@
   }
 </script>
 <style scoped lang="scss">
-  .row {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 50px;
-    @include breakpoint($bp-medium-down) {
-      flex-wrap: wrap;
-    }
-  }
   .img-wrap,
   .text-wrap {
     @include breakpoint($bp-large-up) {

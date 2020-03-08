@@ -16,11 +16,16 @@
         v-bind:text=row.text
         v-bind:image=row.image
       />
+      <Accordions
+        v-if="row.type == 'accordions'"
+        v-bind:accordions=row.accordion
+      />
     </div>
   </section>
 </template>
 <script>
   import TextWithImage from './TextWithImage.vue'
+  import Accordions from './Accordions.vue'
   export default {
     name: 'Section',
     props: {
@@ -29,7 +34,8 @@
       color: String
     },
     components: {
-      TextWithImage
+      TextWithImage,
+      Accordions
     }
   }
 </script>
@@ -91,6 +97,21 @@
       font-size: 24px;
       font-weight: 600;
       text-transform: uppercase;
+    }
+  }
+  .row {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    @include breakpoint($bp-medium-down) {
+      flex-wrap: wrap;
+    }
+    &__accordion {
+      display: block;
+      max-width: 770px;
+      margin-right: auto;
+      margin-left: auto;
     }
   }
 </style>
