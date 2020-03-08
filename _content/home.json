@@ -6,7 +6,7 @@
       "section-content": [
         {
           "type": "text-with-image",
-          "text": "[Buy Tickets](https://www.google.com)\n\nNobody is making money here. Tickets are just a way for us to pool resources so that we can make it a great experience.",
+          "text": "[Buy Tickets](https://www.eventbrite.com/e/beat-farm-2020-tickets-98855536571?aff=eand)\n\nNobody is making money here. Tickets are just a way for us to pool resources so that we can make it a great experience.",
           "image": "/uploads/beatfarmsign.jpg"
         }
       ]
@@ -37,13 +37,7 @@
           "type": "text-with-image",
           "text": "### About Turning Earth Farms\n\n[https://www.turningearthfarms.​org](https://www.turningearthfarms.org/)\n\n> We are dedicated to creating an environment in which you feel uninhibited while playing a role in a sustainable community. With your help we can build a creative hub that respects the earth, using alternative farming methods while reaping the benefits of localized agricultural production.\n>\n> Whether you come to the farm with specific ambitions, or want to join whatever the certain moment has in store, we are interested in your contributions! Allow the land to become your muse and let your creativity flow while you gain valuable life experiences surrounded by the breathtaking Oregon countryside.",
           "image": ""
-        }
-      ]
-    },
-    {
-      "section-title": "FAQs",
-      "section-color": "orange",
-      "section-content": [
+        },
         {
           "type": "accordions",
           "accordion": [
@@ -89,6 +83,16 @@
             }
           ],
           "accordions-title": "Some other shit"
+        }
+      ]
+    },
+    {
+      "section-title": "FAQs",
+      "section-color": "orange",
+      "section-content": [
+        {
+          "type": "text-with-image",
+          "text": "Example Section content"
         }
       ]
     }
