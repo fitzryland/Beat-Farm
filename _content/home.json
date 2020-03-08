@@ -17,12 +17,12 @@
       "section-content": [
         {
           "type": "text-with-image",
-          "text": "### Basics\n\n#### Where\n\nTurning Earth Farms at [17585 Gardner Rd. Dallas, OR 97338](https://www.google.com/maps/place/Turning+Earth+Farms/@44.840048,-123.388839,15z/data=!4m5!3m4!1s0x0:0xce615d5149c3ac77!8m2!3d44.840048!4d-123.388839).  It’s about an hour and 20 minutes from Portland, outside of Salem.  To give you an idea of what typically goes on at the farm, check out this video: <https://vimeo.com/187775426>\n\n#### When\n\nThursday July 16th to Sunday July 19th. You can arrive anytime starting Thursday and have to leave on Sunday.\n\n#### Arrival\n\nYou’ll see a sign at the gate that says Turning Earth Farms.  If the gate is closed, open the gate to enter and make sure to close the gate behind you.  There are animals running around the farm so if you use a gate, leave it as you found it.  Follow the road past the main house, and there will be some volunteers helping direct you to where to park.  You’ll park just a little ways outside the forest, but you’ll need to transport your things a couple minutes to your campsite. If you think you’re going to arrive late at night, please let someone else attending know so we can look out for you.\n\n#### Camping\n\nThere’s plenty of space to setup your camp in the woods.  People working on the farm will be camping closer to the entrance to the forest and we’ll have the bulk of it.  There is a bonfire area near the stage, but no smaller campfires."
+          "text": "### Basics\n\n#### Where\n\nTurning Earth Farms at [17585 Gardner Rd. Dallas, OR 97338](https://www.google.com/maps/place/Turning+Earth+Farms/@44.840048,-123.388839,15z/data=!4m5!3m4!1s0x0:0xce615d5149c3ac77!8m2!3d44.840048!4d-123.388839).  It’s about an hour and 20 minutes from Portland, outside of Salem.  To give you an idea of what typically goes on at the farm, check out this video: <https://vimeo.com/187775426>\n\n#### When\n\nThursday July 16th to Sunday July 19th. You can arrive anytime starting Thursday to help setup. Music will begin on Friday. You have to pack everything out and leave on Sunday.\n\n#### Arrival\n\nYou’ll see a sign at the gate that says Turning Earth Farms. If the gate is closed, open the gate to enter and make sure to close the gate behind you. There are animals running around the farm so if you use a gate, leave it as you found it. Follow the road past the main house, and there will be some volunteers helping direct you to where to park. You’ll park just a little ways outside the forest, but you’ll need to transport your things a couple minutes to your campsite by foot. If you think you’re going to arrive late at night, please let someone else attending know so we can look out for you.\n\n#### Camping\n\nThere’s plenty of space to setup your camp in the woods. People working on the farm will be camping closer to the entrance to the forest but Beat Farm will have the bulk of it. There is a bonfire area near the stage. No smaller campfires."
         },
         {
           "type": "text-with-image",
           "text": "### Rules & Safety Info\n\nIn order to provide a fun, safe and sustainable experience for all out guests, we ask you to adhere to the following guidelines:\n\n1. **Leave-No-Trace** - Prepare to pack out any garbage, recycling or food waste that you bring in or create while at the festival and clean up after yourself after using any amenity. We encourage the use of reusable items and will have a small (very rustic) dish washing station available.\n2. **Respect Your Surroundings** - We are guests of Turning Earth Farms and the rich ecosystem it encompasses. Be gentle when you engage with property, livestock, and natural features.\n3. **Prevent Conflict** - If you find yourself in an situation that makes you feel unsafe or uncomfortable find and report it to a Beat Farm organizer\n4. **Play At Your Own Risk** - Turning Earth Farms is NOT liable for any injuries or lost or stolen items during your stay.",
-          "image": "/uploads/mikalandhispenis.jpg"
+          "image": "/uploads/scheduleingrass.jpg"
         },
         {
           "type": "text-with-image",
@@ -82,19 +82,14 @@
               "title": "Can I bring anything?"
             }
           ],
-          "accordions-title": "Some other shit"
+          "accordions-title": ""
         }
       ]
     },
     {
       "section-title": "FAQs",
       "section-color": "orange",
-      "section-content": [
-        {
-          "type": "text-with-image",
-          "text": "Example Section content"
-        }
-      ]
+      "section-content": []
     }
   ]
 }
