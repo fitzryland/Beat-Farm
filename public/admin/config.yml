@@ -43,6 +43,10 @@ collections:
                     widget: object
                     required: false
                     fields:
+                      - label: Accordions Title
+                        name: 'accordions-title'
+                        widget: text
+                        required: false
                       - label: Accordion
                         name: accordion
                         widget: list
