@@ -62,7 +62,8 @@
               "content": "Hammocks and lights! We have way more lights ready for this year but it always helps to have more. For yoga, bring a mat.",
               "title": "Can I bring anything?"
             }
-          ]
+          ],
+          "accordions-title": "Some other shit"
         },
         {
           "type": "text-with-image",
