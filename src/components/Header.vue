@@ -3,17 +3,19 @@
     <h1 class="logo">
       <img alt="BEAT FARM" src="../assets/logo.svg">
     </h1>
-    <p>July 16-19 2020</p>
-    <Nav />
+    <p>July 2021</p>
   </header>
 </template>
 
 <script>
-  import Nav from '../components/Nav.vue'
+  /*
+    <Nav />
+  */
+  // import Nav from '../components/Nav.vue'
   export default {
     name: 'Header',
     components: {
-      Nav
+      // Nav
     }
   }
 </script>

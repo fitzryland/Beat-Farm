@@ -1,6 +1,11 @@
 <template>
   <div class="home">
     <Header />
+  </div>
+</template>
+
+<script>
+  /*
     <main aria-label="main sections of Beat Farm">
       <template
         v-for="section in sections"
@@ -14,19 +19,14 @@
       </template>
     </main>
     <footer>&copy; {{ year }} Beat Farm PDX</footer>
-  </div>
-</template>
-
-<script>
-  /*
   */
   import Header from './Header.vue'
-  import Section from './Section.vue'
+  // import Section from './Section.vue'
   export default {
     name: 'home',
     components: {
-      Header,
-      Section
+      // Section,
+      Header
     },
     computed: {
       sections() {
