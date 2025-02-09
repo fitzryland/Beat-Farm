@@ -1,0 +1,142 @@
+/* 
+$px-breakpoints: (
+	xs: 0,
+	sm: 430px,
+	md: 768px,
+	lg: 960px,
+	xl: 1280px,
+	xxl: 1920px,
+) !default;
+
+$s-site_padding: 30px;
+$s-vertical: 60px;
+$s-max_site_width: 1740px;
+$s-max_site_wide_width: 1920px;
+$s-max_site_narrow_width: 1060px;
+
+@mixin fluid-prop-base($props, $min-prop-size, $max-prop-size, $min-vw, $max-vw) {
+	// adapted from
+	// https://github.com/Threespot/frontline-sass/blob/master/src/functions/_scale.scss#L19-L39
+	// https://css-tricks.com/simplified-fluid-typography/
+	$u1: unit($min-vw);
+	$u3: unit($min-prop-size);
+	$u4: unit($max-prop-size);
+	@if $u1 == $u3 and $u1 == $u4 {
+		& {
+			$slope: ( $max-prop-size - $min-prop-size ) / ( $max-vw - $min-vw );
+			$intercept: $max-prop-size - ($slope * $max-vw);
+			@each $prop in $props {
+				#{$prop}: clamp($min-prop-size, calc( #{$slope} * 100vw + #{$intercept} ), $max-prop-size );
+			}
+		}
+	}
+	@else {
+		@warn '🔴 All sizes in fluid-prop() must use px for unit.';
+	}
+}
+@mixin fluid-prop($prop, $min-prop-size, $max-prop-size) {
+	@include fluid-prop-base( $prop, $min-prop-size, $max-prop-size, map-get($px-breakpoints, "md"), map-get($px-breakpoints, "xl") );
+}
+@mixin fluid-prop-max($prop, $min-prop-size, $max-prop-size) {
+	@include fluid-prop-base( $prop, $min-prop-size, $max-prop-size, map-get($px-breakpoints, "sm"), $s-max_site_width );
+}
+@mixin fluid-prop-large($prop, $min-prop-size, $max-prop-size) {
+	@include fluid-prop-base( $prop, $min-prop-size, $max-prop-size, map-get($px-breakpoints, "lg"), $s-max_site_width );
+}
+ */
+/*
+VARS
+*/
+:root {
+	--purple: #42195F;
+	--green: #ADFF00;
+	--blue: #94D2BD;
+}
+/*
+RESET
+*/
+*, *::after, *::before {
+	box-sizing: border-box;
+  }
+  * {
+	font: inherit;
+	margin: 0;
+	padding: 0;
+	border: 0;
+  }
+  body {
+	background-color: var(--g-bg-body, white);
+  }
+  html,
+  body {
+	  height: 100%;
+  }
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section, main, form legend {
+	  display: block;
+  }
+  ol, ul, menu {
+	  list-style: none;
+  }
+  blockquote, q {
+	  quotes: none;
+  }
+  button, input, textarea, select {
+	  margin: 0;
+  }
+  .co-button, .form-control, .link, .reset { // reset style of buttons + form controls
+	  background-color: transparent;
+	  padding: 0;
+	  border: 0;
+	  border-radius: 0;
+	  color: inherit;
+	  line-height: inherit;
+	  appearance: none;
+  }
+  select.form-control::-ms-expand {
+	  display: none; // hide Select default icon on IE
+  }
+  textarea {
+	  resize: vertical;
+	  overflow: auto;
+	  vertical-align: top;
+  }
+  input::-ms-clear {
+	  display: none; // hide X icon in IE and Edge
+  }
+  table {
+	  border-collapse: collapse;
+	  border-spacing: 0;
+  }
+  img, video, svg {
+	  height: auto;
+	  max-width: 100%;
+  }
+  embed,
+  iframe,
+  object {
+	  max-width: 100%;
+  }
+  h1, h2, h3, h4, h5, h6 {
+	  text-wrap: balance;
+  }
+  p, li, figcaption {
+	  text-wrap: pretty;
+  }
+/*
+BASE
+*/
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: serif;
+	font-size: 18px;
+	font-size-adjust: 0.49;
+	font-weight: normal;
+	line-height: 1.4;
+	.fonts-loaded & {
+		font-family: sabbath-black, serif;
+		font-size-adjust: none;
+	}
+}
