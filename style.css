@@ -188,9 +188,15 @@ a:active {
 	top: 20px;
 	width: calc(100% - 40px);
 }
-.shadow-child {
+.shadow-child,
+.light-shadow > * {
 	position: relative;
 	z-index: 2;
+}
+.light-shadow::after {
+	background-color: var(--green);
+	border-radius: 80px;
+	box-shadow: 0px 0px 40px 40px var(--green);
 }
 /* 
 HEADER
@@ -304,6 +310,35 @@ TICKETS
 	box-shadow: 0.5em 0.5em var(--purple);
 	font-size: max(30px, 3vw);
 	padding: 0.5em 1em;
+}
+/*
+WHY
+*/
+.why {
+	color: var(--purple);
+	max-width: 730px;
+	margin: max(100px, 5vw) auto;
+	padding: 30px 15px 15px;
+}
+.why ul {
+	list-style-type: disc;
+	padding-left: 1em;
+}
+.why ul,
+.why p {
+	margin-bottom: 1em;
+}
+.why li {
+	margin-bottom: 0.2em
+}
+.why a:link,
+.why a:visited {
+	color: var(--purple);
+}
+.venue-link {
+	display: block;
+	font-size: 1.2em;
+	text-align: center;
 }
 /*
 CONTACT
