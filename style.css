@@ -15,72 +15,72 @@ RESET
 */
 *, *::after, *::before {
 	box-sizing: border-box;
-  }
-  * {
-	font: inherit;
+}
+* {
+font: inherit;
+margin: 0;
+padding: 0;
+border: 0;
+}
+body {
+background-color: var(--g-bg-body, white);
+}
+html,
+body {
+	height: 100%;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main, form legend {
+	display: block;
+}
+ol, ul, menu {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+button, input, textarea, select {
 	margin: 0;
+}
+.co-button, .form-control, .link, .reset {
+	background-color: transparent;
 	padding: 0;
 	border: 0;
-  }
-  body {
-	background-color: var(--g-bg-body, white);
-  }
-  html,
-  body {
-	  height: 100%;
-  }
-  article, aside, details, figcaption, figure,
-  footer, header, hgroup, menu, nav, section, main, form legend {
-	  display: block;
-  }
-  ol, ul, menu {
-	  list-style: none;
-  }
-  blockquote, q {
-	  quotes: none;
-  }
-  button, input, textarea, select {
-	  margin: 0;
-  }
-  .co-button, .form-control, .link, .reset {
-	  background-color: transparent;
-	  padding: 0;
-	  border: 0;
-	  border-radius: 0;
-	  color: inherit;
-	  line-height: inherit;
-	  appearance: none;
-  }
-  select.form-control::-ms-expand {
-	  display: none;
-  }
-  textarea {
-	  resize: vertical;
-	  overflow: auto;
-	  vertical-align: top;
-  }
-  input::-ms-clear {
-	  display: none; // hide X icon in IE and Edge
-  }
-  table {
-	  border-collapse: collapse;
-	  border-spacing: 0;
-  }
-  img, video, svg {
-	  height: auto;
-	  max-width: 100%;
-  }
-  embed,
-  iframe,
-  object {
-	  max-width: 100%;
-  }
-  h1, h2, h3, h4, h5, h6 {
-	  text-wrap: balance;
-  }
-  p, li, figcaption {
-	  text-wrap: pretty;
-  }
+	border-radius: 0;
+	color: inherit;
+	line-height: inherit;
+	appearance: none;
+}
+select.form-control::-ms-expand {
+	display: none;
+}
+textarea {
+	resize: vertical;
+	overflow: auto;
+	vertical-align: top;
+}
+input::-ms-clear {
+	display: none; // hide X icon in IE and Edge
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img, video, svg {
+	height: auto;
+	max-width: 100%;
+}
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+	text-wrap: balance;
+}
+p, li, figcaption {
+	text-wrap: pretty;
+}
 /*
 BASE
 */
@@ -109,7 +109,7 @@ body {
 	}
 }
 .fonts-loaded body {
-	font-family: "bf-monument", Zapfino, sans-serif;
+	font-family: "bf-monument", sans-serif;
 	font-size-adjust: none;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -153,9 +153,11 @@ a:active {
 	inherits: false;
 	initial-value: 300%;
 }
-.button {
+.button,
+.button:link {
 	background-image: linear-gradient(20deg, var(--blue) var(--button-s1), var(--blue) var(--button-s2), var(--green) var(--button-s3), var(--green) var(--button-s4) );
 	color: var(--purple);
+	display: inline-block;
 	padding: 5px 10px;
 	transition: --button-s1 1s ease, --button-s2 1s ease, --button-s3 1s ease, --button-s4 1s ease;
 }
@@ -165,6 +167,11 @@ a:active {
 	--button-s3: -130%;
 	--button-s2: -170%;
 	--button-s1: -200%;
+}
+.button:link,
+.button:visited {
+	color: var(--purple);
+	text-decoration: none;
 }
 .shadow {
 	position: relative;
@@ -284,6 +291,19 @@ HEADER
 		font-size: 21px;
 		margin-top: 20px;
 	}
+}
+/*
+TICKETS
+*/
+.tickets {
+	margin-top: max(60px, 7vw);
+	margin-bottom: max(60px, 7vw);
+	text-align: center;
+}
+.tickets_button:link {
+	box-shadow: 0.5em 0.5em var(--purple);
+	font-size: max(30px, 3vw);
+	padding: 0.5em 1em;
 }
 /*
 CONTACT
