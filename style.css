@@ -359,7 +359,6 @@ TICKETS
 WHY
 */
 .why {
-	color: var(--purple);
 	max-width: 730px;
 	margin: max(100px, 5vw) auto;
 	padding: 30px 15px 15px;
@@ -373,10 +372,6 @@ WHY
 }
 .why li {
 	margin-bottom: 0.2em
-}
-.why a:link,
-.why a:visited {
-	color: var(--purple);
 }
 .venue-link {
 	display: block;
