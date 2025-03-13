@@ -122,6 +122,7 @@ h2 {
 }
 h3 {
 	font-size: min(5vw, 40px);
+	font-weight: 600;
 	margin-bottom: 0.4em;
 }
 .fonts-loaded h1, .fonts-loaded h2 {
@@ -140,6 +141,16 @@ a:active {
 }
 p {
 	margin-bottom: 1em;
+}
+ul {
+	list-style-type: disc;
+	padding-left: 1em;
+}
+ul {
+	margin-bottom: 1em;
+}
+li {
+	margin-bottom: 0.2em
 }
 @property --button-s1 {
 	syntax: '<percentage>';
@@ -196,15 +207,13 @@ p {
 	top: 20px;
 	width: calc(100% - 40px);
 }
-.shadow-child,
-.light-shadow > * {
+.shadow-child {
 	position: relative;
 	z-index: 2;
 }
-.light-shadow::after {
-	background-color: var(--green);
-	border-radius: 80px;
-	box-shadow: 0px 0px 40px 40px var(--green);
+.top {
+	position: relative;
+	z-index: 10;
 }
 /* 
 HEADER
@@ -243,18 +252,6 @@ HEADER
 	max-width: 730px;
 	width: 100%;
 }
-.header--name {
-	font-size: min(21vw, 210px);
-	font-weight: 800;
-	line-height: 0.8;
-	position: relative;
-	margin-bottom: min(18vw, 180px);
-}
-@media (min-width: 1140px) {
-	.header--name {
-		margin-bottom: 0;
-	}
-}
 .header--year {
 	border: 3px solid var(--green);
 	border-radius: 100%;
@@ -288,8 +285,8 @@ HEADER
 	color: var(--purple);
 	display: inline-block;
 	font-size: min(9vw, 90px);
-	text-stroke: 1px var(--green);
-	-webkit-text-stroke: 1px var(--green);
+	text-stroke: 0.04em var(--green);
+	-webkit-text-stroke: 0.04em var(--green);
 	text-transform: uppercase;
 }
 @media (min-width: 1140px) {
@@ -340,8 +337,9 @@ TICKETS
 	color: var(--purple);
 	display: flex;
 	font-size: min(4vw, 35px);
-	justify-content: center;
+	font-weight: 600;
 	height: min(8vw, 95px);
+	justify-content: center;
 	left: 0;
 	position: absolute;
 	top: 20px;
@@ -362,16 +360,6 @@ WHY
 	max-width: 730px;
 	margin: max(100px, 5vw) auto;
 	padding: 30px 15px 15px;
-}
-.why ul {
-	list-style-type: disc;
-	padding-left: 1em;
-}
-.why ul {
-	margin-bottom: 1em;
-}
-.why li {
-	margin-bottom: 0.2em
 }
 .venue-link {
 	display: block;
@@ -452,7 +440,8 @@ CONTACT
 */
 .conduct {
 	margin-inline: auto;
-	max-width: 730px;
+	max-width: 790px;
+	padding: 0 15px;
 }
 .conduct h2 {
 	margin-bottom: 0.3em;
