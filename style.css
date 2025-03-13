@@ -344,6 +344,7 @@ TICKETS
 	position: absolute;
 	top: 20px;
 	width: min(8vw, 95px);
+	z-index: 10;
 }
 .ticket-instructions p:last-child {
 	margin-bottom: 0;
