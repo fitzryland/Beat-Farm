@@ -309,6 +309,23 @@ HEADER
 	}
 }
 /*
+SOLD OUT
+*/
+.sold-out-wrap {
+	text-align: center;
+	margin: min(20vw, 60px) 0;
+}
+.sold-out {
+	display: inline-block;
+	margin-inline: auto;
+	margin-bottom: 0;
+}
+.sold-out .shadow-child {
+	font-family: sabbath-black, serif;;
+	font-size: min(40vw, 200px);
+	line-height: 0.8;
+}
+/*
 TICKETS
 */
 .tickets {
