@@ -5,7 +5,6 @@ VARS
     --black: #35363A;
     --white: #FFFFFF;
     --gray: #A8A5A3;
-	--purple: #42195F;
 	--green: #A4CF57;
     --darkGreen: #75B858;
 	--blue: #5AA1CE;
@@ -80,6 +79,7 @@ object {
 	max-width: 100%;
 }
 h1, h2, h3, h4, h5, h6 {
+    font-family: sans-serif;
 	text-wrap: balance;
 	line-height: 1.1;
 }
@@ -121,19 +121,22 @@ body {
 	font-family: "bf-monument", sans-serif;
 	font-size-adjust: none;
 }
-h1, h2 {
+h1 {
 	font-family: serif;
 	font-size-adjust: 0.49;
 }
+h2, h3, h4, h5, h6 {
+    font-family: "bf-share-tech", monospace;
+}
 h2 {
-	font-size: min(12vw, 60px);
+	font-size: min(7vw, 40px);
 }
 h3 {
 	font-size: min(5vw, 40px);
 	font-weight: 600;
 	margin-bottom: 0.4em;
 }
-.fonts-loaded h1, .fonts-loaded h2 {
+.fonts-loaded h1 {
 	font-family: sabbath-black, serif;
 	font-size-adjust: none;
 }
@@ -183,7 +186,7 @@ li {
 .button,
 .button:link {
 	background-image: linear-gradient(20deg, var(--blue) var(--button-s1), var(--blue) var(--button-s2), var(--green) var(--button-s3), var(--green) var(--button-s4) );
-	color: var(--purple);
+	color: var(--black);
 	display: inline-block;
 	padding: 5px 10px;
 	transition: --button-s1 1s ease, --button-s2 1s ease, --button-s3 1s ease, --button-s4 1s ease;
@@ -197,15 +200,15 @@ li {
 }
 .button:link,
 .button:visited {
-	color: var(--purple);
+	color: var(--black);
 	text-decoration: none;
 }
 .shadow {
 	position: relative;
 }
 .shadow::after {
-	background-color: var(--purple);
-	box-shadow: 0px 0px 40px 40px var(--purple);
+	background-color: var(--black);
+	box-shadow: 0px 0px 40px 40px var(--black);
 	border-radius: 30%;
 	content: "";
 	height: calc(100% - 40px);
@@ -271,4 +274,82 @@ li {
 .header--date__end {
     bottom: 90px;
     right: 30px;
+}
+
+/*
+CONTACT
+*/
+.contact {
+	display: flex;
+    flex-wrap: wrap;
+	gap: 30px;
+	justify-content: space-between;
+	margin-inline: auto;
+	margin-top: 60px;
+	padding-bottom: 60px;
+	max-width: 1000px;
+	padding-right: 30px;
+	padding-left: 30px;
+    @media screen and (min-width: 500px) {
+        flex-wrap: nowrap;
+    }
+}
+.contact--section {
+	container-type: inline-size;
+    width: 100%;
+    @media screen and (min-width: 500px) {
+        width: min(50%, 400px);
+    }
+}
+.contact--section h2 {
+	text-align: center;
+	line-height: 1;
+	margin-bottom: min(2vw, 20px);
+	position: relative;
+	z-index: 2;
+}
+.mailchimp-form {
+	position: relative;
+	z-index: 2;
+}
+.mailchip-label {
+	font-size: min(3.4vw, 16px);
+}
+.mailchimp-input-row {
+	column-gap: 15px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	row-gap: 5px;
+}
+@container (width > 300px) {
+	.mailchimp-input-row {
+		flex-wrap: nowrap;
+	}
+}
+.mailchimp-input-row input[type=email] {
+	width: 100%;
+}
+.instagram_link:link,
+.instagram_link:visited {
+    color: var(--white);
+	display: block;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transition: --button-s1 1s ease, --button-s2 1s ease, --button-s3 1s ease, --button-s4 1s ease;
+	z-index: 2;
+}
+.instagram_logo {
+	display: inline-block;
+	margin-inline: auto;
+	width: 55px;
+}
+.instagram_logo path {
+	fill: var(--green);
+	transition: fill 0.5s ease;
+}
+.instagram_link:hover .instagram_logo path,
+.instagram_link:active .instagram_logo path {
+	fill: var(--blue);
 }
