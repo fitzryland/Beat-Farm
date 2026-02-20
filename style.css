@@ -212,29 +212,30 @@ li {
 	position: relative;
 }
 .shadow::before {
-	background-image: url(images/texture2.jpg);
-	mix-blend-mode: multiply;
+	background-image: url(images/texture3.gif);
 	content: "";
 	height: calc(100% + 120px);
-	-webkit-mask-image: radial-gradient(black, transparent 90%);
 	mask-image: radial-gradient(black, transparent 90%);
 	left: -60px;
+	mix-blend-mode: multiply;
 	pointer-events: none;
 	position: absolute;
 	top: -60px;
 	width: calc(100% + 60px);
+	z-index: 1;
 }
 .shadow::after {
 	background-color: var(--black);
 	box-shadow: 0px 0px 40px 40px var(--black);
-	border-radius: 30%;
+	border-radius: 20%;
 	content: "";
 	height: calc(100% - 40px);
 	left: 20px;
-	opacity: 0.8;
+	opacity: 0.9;
 	position: absolute;
 	top: 20px;
 	width: calc(100% - 40px);
+	z-index: 1;
 }
 .shadow * {
 	position: relative;
@@ -417,7 +418,7 @@ CONTACT
 	text-align: center;
 }
 .intro_desc__short {
-	margin-top: -150px;
+	margin-top: -130px;
 }
 @media screen and (min-width: 800px) {
 	.intro_desc {
@@ -448,19 +449,9 @@ CONTACT
 		margin-top: 0;
 	}
 }
-.content_box--image_wrap {
+ .content_box--image_wrap {
 	display: inline-block;
 	margin-left: -30px;
-	-webkit-mask-image:  radial-gradient(white, black 60%), url("images/mask1.jpg");
-	mask-image:  radial-gradient(white, black 60%), url("images/mask1.jpg");
-	-webkit-mask-mode: luminance;
-	mask-mode: luminance;
-	-webkit-mask-size: 140%;
-	mask-size: 140%;
-	-webkit-mask-repeat: no-repeat;
-	mask-repeat: no-repeat;
-	-webkit-mask-position: center;
-	mask-position: center;
 	position: relative;
 	width: calc(100% + 60px);
 }
@@ -487,27 +478,28 @@ CONTACT
 }
 .content_box--image {
 	height: auto;
+	mask-image:  radial-gradient(black, transparent 70%), url("images/mask6.png");
+	mask-size: 110%;
+	mask-repeat: no-repeat;
+	mask-position: left center;
 	max-width: 100%;
 	width: 100%;
 }
 .lasers_wrap {
-	-webkit-mask-image:  linear-gradient(black, white 60%, black 100%);
-	mask-image:  linear-gradient(black, white 60%, black 100%);
-	-webkit-mask-mode: luminance;
-	mask-mode: luminance;
+	mask-image:  linear-gradient(transparent, black 30%, black 50%, transparent 100%);
 	position: relative;
 	width: 100%;
 }
 .lasers_wrap::before {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
 	background-color: #363A35;
+	content: "";
+	height: 100%;
+	left: 0;
 	mix-blend-mode: hue;
 	opacity: 0.8;
+	position: absolute;
+	top: 0;
+	width: 100%;
 	z-index: 10;
 }
 .lasers_wrap::after {
@@ -525,5 +517,6 @@ CONTACT
 .lasers {
 	display: block;
 	height: auto;
+	mask-image:  linear-gradient(transparent, black 30%, black 50%, transparent 100%);
 	width: 100%;
 }
