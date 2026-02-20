@@ -2,11 +2,11 @@
 VARS
 */
 :root {
-    --black: #35363A;
-    --white: #FFFFFF;
-    --gray: #A8A5A3;
+	--black: #35363A;
+	--white: #FFFFFF;
+	--gray: #A8A5A3;
 	--green: #A4CF57;
-    --darkGreen: #75B858;
+	--darkGreen: #75B858;
 	--blue: #5AA1CE;
 }
 @keyframes spin {
@@ -76,7 +76,7 @@ object {
 	max-width: 100%;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: sans-serif;
+	font-family: sans-serif;
 	text-wrap: balance;
 	line-height: 1.1;
 }
@@ -95,11 +95,6 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	background-attachment: fixed;
-	background-color: var(--green);
-	background-image: url(images/BF26-SaveTheDate.jpg);
-	background-size: cover;
-	background-position: center center;
 	color: var(--white);
 	font-family: sans-serif;
 	font-size: 16px;
@@ -107,7 +102,20 @@ body {
 	font-weight: normal;
 	height: auto;
 	line-height: 1.4;
-    min-height: 100%;
+	min-height: 100%;
+	position: relative;
+}
+body::before {
+	background-color: var(--green);
+	background-image: url(images/BF26-SaveTheDate.jpg);
+	background-position: center center;
+	background-size: cover;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
 }
 @media (min-width: 1500px) {
 	body {
@@ -123,7 +131,7 @@ h1 {
 	font-size-adjust: 0.49;
 }
 h2, h3, h4, h5, h6 {
-    font-family: "bf-share-tech", monospace;
+	font-family: "bf-share-tech", monospace;
 }
 h2 {
 	font-size: min(7vw, 40px);
@@ -208,6 +216,7 @@ li {
 	mix-blend-mode: multiply;
 	content: "";
 	height: calc(100% + 120px);
+	-webkit-mask-image: radial-gradient(black, transparent 90%);
 	mask-image: radial-gradient(black, transparent 90%);
 	left: -60px;
 	pointer-events: none;
@@ -237,38 +246,38 @@ li {
 }
 
 .header {
-    height: 100vh;
-    max-width: 1020px;
-    margin-inline: auto;
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 100%;
+	height: 100vh;
+	max-width: 1020px;
+	margin-inline: auto;
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
 }
 .header--text {
-    max-width: min(50vw, 300px);
-    position: absolute;
-    right: 30px;
-    text-align: right;
-    top: 30px;
-    z-index: 10;
+	max-width: min(50vw, 300px);
+	position: absolute;
+	right: 30px;
+	text-align: right;
+	top: 30px;
+	z-index: 10;
 }
 .header--title {
-    font-size: min(6vw, 40px);
+	font-size: min(6vw, 40px);
 }
 .header--location {
-    font-size: min(4vw, 30px);
+	font-size: min(4vw, 30px);
 }
 .header--save_the_date {
-    height: 95%;
-    left: 50%;
-    max-height: 95vh;
-    max-width: 95vw;
-    position: absolute;
-    top: 40%;
-    transform: translate(-50%, -50%);
-    width: 95%;
-    z-index: 1;
+	height: 95%;
+	left: 50%;
+	max-height: 95vh;
+	max-width: 95vw;
+	position: absolute;
+	top: 40%;
+	transform: translate(-50%, -50%);
+	width: 95%;
+	z-index: 1;
 }
 @media screen and (min-width: 600px) {
 	.header--save_the_date {
@@ -276,18 +285,18 @@ li {
 	}
 }
 .header--date {
-    font-family: 'bf-share-tech', monospace;
-    font-size: min(10vw, 100px);
-    position: absolute;
-    z-index: 5;
+	font-family: 'bf-share-tech', monospace;
+	font-size: min(10vw, 100px);
+	position: absolute;
+	z-index: 5;
 }
 .header--date__start {
-    left: 30px;
-    top: 30px;
+	left: 30px;
+	top: 30px;
 }
 .header--date__end {
-    bottom: 90px;
-    right: 30px;
+	bottom: 90px;
+	right: 30px;
 }
 .header--on_sale {
 	top: 50%;
@@ -323,7 +332,7 @@ CONTACT
 */
 .contact {
 	display: flex;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 	gap: 30px;
 	justify-content: space-between;
 	margin-inline: auto;
@@ -332,16 +341,16 @@ CONTACT
 	max-width: 1000px;
 	padding-right: 30px;
 	padding-left: 30px;
-    @media screen and (min-width: 500px) {
-        flex-wrap: nowrap;
-    }
+	@media screen and (min-width: 500px) {
+		flex-wrap: nowrap;
+	}
 }
 .contact--section {
 	container-type: inline-size;
-    width: 100%;
-    @media screen and (min-width: 500px) {
-        width: min(50%, 400px);
-    }
+	width: 100%;
+	@media screen and (min-width: 500px) {
+		width: min(50%, 400px);
+	}
 }
 .contact--section h2 {
 	text-align: center;
@@ -374,7 +383,7 @@ CONTACT
 }
 .instagram_link:link,
 .instagram_link:visited {
-    color: var(--white);
+	color: var(--white);
 	display: block;
 	position: relative;
 	text-align: center;
@@ -442,11 +451,16 @@ CONTACT
 .content_box--image_wrap {
 	display: inline-block;
 	margin-left: -30px;
+	-webkit-mask-image:  radial-gradient(white, black 60%), url("images/mask1.jpg");
 	mask-image:  radial-gradient(white, black 60%), url("images/mask1.jpg");
-    mask-mode: luminance;
-    mask-size: 140%;
-    mask-repeat: no-repeat;
-    mask-position: center;
+	-webkit-mask-mode: luminance;
+	mask-mode: luminance;
+	-webkit-mask-size: 140%;
+	mask-size: 140%;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-position: center;
 	position: relative;
 	width: calc(100% + 60px);
 }
@@ -477,7 +491,9 @@ CONTACT
 	width: 100%;
 }
 .lasers_wrap {
+	-webkit-mask-image:  linear-gradient(black, white 60%, black 100%);
 	mask-image:  linear-gradient(black, white 60%, black 100%);
+	-webkit-mask-mode: luminance;
 	mask-mode: luminance;
 	position: relative;
 	width: 100%;
