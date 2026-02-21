@@ -452,6 +452,7 @@ CONTACT
  .content_box--image_wrap {
 	display: inline-block;
 	margin-left: -30px;
+	mask-image:  linear-gradient(180deg, hsla(0, 0%, 0%, 0.05), black 20%, black 80%, hsla(0, 0%, 0%, 0.05));
 	position: relative;
 	width: calc(100% + 60px);
 }
@@ -478,7 +479,7 @@ CONTACT
 }
 .content_box--image {
 	height: auto;
-	mask-image:  radial-gradient(black, transparent 70%), url("images/mask6.png");
+	mask-image: url("images/mask6.png");
 	mask-size: 110%;
 	mask-repeat: no-repeat;
 	mask-position: left center;
@@ -486,7 +487,7 @@ CONTACT
 	width: 100%;
 }
 .lasers_wrap {
-	mask-image:  linear-gradient(transparent, black 30%, black 50%, transparent 100%);
+	mask-image:  linear-gradient(transparent, black 30%, black 80%, transparent 100%);
 	position: relative;
 	width: 100%;
 }
@@ -517,6 +518,6 @@ CONTACT
 .lasers {
 	display: block;
 	height: auto;
-	mask-image:  linear-gradient(transparent, black 30%, black 50%, transparent 100%);
+	mask-image:  linear-gradient(transparent, black 30%, black 80%, transparent 100%);
 	width: 100%;
 }
