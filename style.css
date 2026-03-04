@@ -26,7 +26,7 @@ padding: 0;
 border: 0;
 }
 body {
-background-color: var(--g-bg-body, white);
+	background-color: var(--g-bg-body, white);
 }
 html,
 body {
@@ -107,7 +107,7 @@ body {
 }
 body::before {
 	background-color: var(--green);
-	background-image: url(images/BF26-SaveTheDate.jpg);
+	background-image: url(images/ticketsLiveBackground.jpg);
 	background-position: center center;
 	background-size: cover;
 	content: "";
@@ -130,7 +130,7 @@ h1 {
 	font-family: serif;
 	font-size-adjust: 0.49;
 }
-h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
 	font-family: "bf-share-tech", monospace;
 }
 h2 {
@@ -141,15 +141,15 @@ h3 {
 	font-weight: 600;
 	margin-bottom: 0.4em;
 }
-.fonts-loaded h1 {
+/* .fonts-loaded h1 {
 	font-family: sabbath-black, serif;
 	font-size-adjust: none;
-}
+} */
 a:link,
 a:visited {
 	color: var(--green);
 	text-decoration: underline;
-	transition: color 10s ease;
+	transition: color 0.1s ease;
 }
 a:hover,
 a:active {
@@ -247,8 +247,8 @@ li {
 }
 
 .header {
+	font-family: 'bf-share-tech', monospace;
 	height: 100vh;
-	max-width: 1020px;
 	margin-inline: auto;
 	position: relative;
 	left: 0;
@@ -256,34 +256,37 @@ li {
 	width: 100%;
 }
 .header--text {
-	max-width: min(50vw, 300px);
-	position: absolute;
-	right: 30px;
-	text-align: right;
-	top: 30px;
-	z-index: 10;
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 15px;
+	position: relative;
+	width: 100%;
+	z-index: 5;
 }
 .header--title {
-	font-size: min(6vw, 40px);
+	line-height: 1.4;
 }
-.header--location {
-	font-size: min(4vw, 30px);
+.header--location {}
+.header-text {
+	background-color: var(--green);
+	border-radius: 1em;
+	color: var(--black);
+	display: inline-block;
+	font-size: clamp(20px, 3vw, 35px);
+	padding: 0.25em 1em;
 }
 .header--save_the_date {
 	height: 95%;
 	left: 50%;
-	max-height: 95vh;
+	max-height: 75vh;
 	max-width: 95vw;
 	position: absolute;
-	top: 40%;
+	top: 50%;
 	transform: translate(-50%, -50%);
 	width: 95%;
 	z-index: 1;
-}
-@media screen and (min-width: 600px) {
-	.header--save_the_date {
-		top: 50%;
-	}
 }
 .header--date {
 	font-family: 'bf-share-tech', monospace;
@@ -300,33 +303,48 @@ li {
 	right: 30px;
 }
 .header--on_sale {
-	top: 50%;
-	left: 15px;
-	max-width: max(50vw, 300px);
+	bottom: 30px;
+	left: 50%;
 	position: absolute;
+	text-align: center;
+	transform: translateX(-50%);
+	width: 100%;
+	z-index: 5;
 }
 @media screen and (min-width: 600px) {
 	.header--on_sale {
-		top: min(50%, 450px);
+		width: auto;
 	}
 }
-@media screen and (min-width: 1065px) {
-	.header--on_sale {
-		left: -2vw;
-	}
+.header--tickets_button {
+	background-color: var(--blue);
+	border-radius: 20px;
+	box-shadow: 5px 5px 0px 0px var(--black);
+	display: inline-block;
+	font-size: max(4vw, 30px);
+	padding: 20px 40px;
+	text-align: center;
+	text-decoration: none;
 }
-.header--on_sale_headline {
-	font-family: 'bf-share-tech', monospace;
-	font-size: min(8vw, 50px);
-	display: block;
-	line-height: 1;
-	position: relative;
-	z-index: 2;
+.header--tickets_button:link,
+.header--tickets_button:visited,
+.header--tickets_button:hover,
+.header--tickets_button:focus {
+	transition: color 0.3s ease, background-color 0.3s ease;
 }
-.header--on_sale_tagline {
-	position: relative;
-	z-index: 2;
+.header--tickets_button:link,
+.header--tickets_button:visited {
+	color: var(--black);
+	text-decoration: none;
 }
+.header--tickets_button:hover,
+.header--tickets_button:focus {
+	background-color: var(--black);
+	box-shadow: 5px 5px 0px 0px var(--blue);
+	color: var(--blue);
+}
+
+
 
 /*
 CONTACT
