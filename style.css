@@ -245,10 +245,15 @@ li {
 	position: relative;
 	z-index: 10;
 }
+.text-section {
+	margin-inline: auto;
+	max-width: 790px;
+	padding: 0 30px 60px;
+}
 
 .header {
 	font-family: 'bf-share-tech', monospace;
-	height: 100vh;
+	/* height: 100vh; */
 	margin-inline: auto;
 	position: relative;
 	left: 0;
@@ -343,7 +348,11 @@ li {
 	box-shadow: 5px 5px 0px 0px var(--blue);
 	color: var(--blue);
 }
-
+.getting_there h2 {
+	font-size: min(7vw, 70px);
+	padding: 50px 0;
+	text-align: center;
+}
 
 
 /*
@@ -426,11 +435,6 @@ CONTACT
 /* 
 * Conduct
 */
-.conduct {
-	margin-inline: auto;
-	max-width: 790px;
-	padding: 0 30px 60px;
-}
 .conduct h2 {
 	margin-bottom: 0.3em;
 	text-align: center;
