@@ -348,6 +348,14 @@ li {
 	box-shadow: 5px 5px 0px 0px var(--blue);
 	color: var(--blue);
 }
+.getting_there {
+	align-items: center;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	position: relative;
+	z-index: 1000;
+}
 .getting_there h2 {
 	font-size: min(7vw, 70px);
 	padding: 50px 0;
